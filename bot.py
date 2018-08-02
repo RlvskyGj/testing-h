@@ -1,9 +1,6 @@
 import telebot
-import time
 
-token='518126418:AAGQHyepa2vgecgoTbI3zON5kIRijjWbTYw'
-
-bot=telebot.TeleBot(token)
+bot =telebot.TeleBot('518126418:AAGQHyepa2vgecgoTbI3zON5kIRijjWbTYw')
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def echo_msg(message):
