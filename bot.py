@@ -18,6 +18,7 @@ bot.
 
 from telegram.ext import Updater, CommandHandler
 import logging
+from os import environ
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -77,6 +78,7 @@ def error(bot, update, error):
 
 def main():
     """Run bot."""
+    application.listen(environ["PORT"])
     updater = Updater("518126418:AAGQHyepa2vgecgoTbI3zON5kIRijjWbTYw")
 
     # Get the dispatcher to register handlers
